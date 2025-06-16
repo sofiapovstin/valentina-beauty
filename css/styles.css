@@ -1,3 +1,5 @@
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -20,10 +22,6 @@ header {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-header h1 {
-    margin: 0;
-}
-
 .logo {
     width: 200px;
 }
@@ -31,7 +29,7 @@ header h1 {
 nav a {
     margin-left: 15px;
     text-decoration: none;
-    color: #333;
+    color: #c45a7c;
     font-weight: bold;
 
 }
@@ -39,6 +37,58 @@ nav a {
 nav {
     padding-right: 40px;
 }
+
+.menu-toggle {
+    color: #ffe6e6;
+}
+@media (max-width: 768px) {
+    body{
+        padding-top: 0;
+    }
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 15px;
+        position: sticky;
+        top: 0;
+        background: #ffe6e6;
+        width: auto;
+        z-index: 999;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+        width: 120px;
+        height: auto;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background: #ffe6e6;
+        padding: 10px;
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    }
+
+    nav.open {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 28px;
+        color: #444;
+    }
+}
+
 .hero {
     text-align: center;
     padding: 60px 20px;

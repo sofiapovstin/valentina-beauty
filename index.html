@@ -9,6 +9,10 @@
     <meta name="google-site-verification" content="tbLzLKA4pqPkZox5crtDLd8BVrSBVNQMt7Pd6dw4Qes" />
     <link rel="stylesheet" href="css/styles.css">
     <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('open');
+        }
         function openImage(src) {
             document.getElementById("imageModal").style.display = "block";
             document.getElementById("modalImage").src = src;
@@ -24,6 +28,7 @@
     <a href="#hero">
         <img src="https://i.postimg.cc/3RDYh49c/logo.png" alt="Haus Frisur" class="logo">
     </a>
+    <span class="menu-toggle" onclick="toggleMenu()">☰</span>
     <nav>
         <a href="#about">Про мене</a>
         <a href="#services">Послуги</a>
